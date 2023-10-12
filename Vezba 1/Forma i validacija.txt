@@ -1,0 +1,6 @@
+Forma i validacija
+biranje u dodavanju novog vozila da li?
+submit dugme script ne menja boju za cenu - docs 17.
+
+
+DOSAO SAM DO STRANICA NARUDZBINA.html DO 5.

@@ -1,7 +1,16 @@
-body{ background-color: #556B2F; }
-main.container{ 
-background-color:white; 
-box-shadow: 0px 0px 12px black; 
-border:1px solid black; 
-margin-top:15px; 
+body {
+  background-color: #556b2f;
+}
+main.container {
+  background-color: white;
+  box-shadow: 0px 0px 12px black;
+  border: 1px solid black;
+  margin-top: 15px;
+}
+
+.error {
+  border-color: red;
+}
+.success {
+  border-color: green;
 }
