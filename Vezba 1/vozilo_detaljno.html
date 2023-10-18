@@ -33,6 +33,16 @@
         </div>
         <h1>Detalji vozila</h1>
         <dl class="row">
+          <select onchange="document.getElementById('forma').submit() ">
+            <option value="novo">novo</option>
+            <option value="prihvaceno">prihvaceno</option>
+            <option value="odbijeno">odbijeno</option>
+            <option value="u pripremi">u pripremi</option>
+            <option value="u dostavi">u dostavi</option>
+            <option value="zavrseno">zavrseno</option>
+
+            Status
+          </select>
           <dt class="col-sm-3">Na lageru od</dt>
           <dd class="col-sm-9">5.10.2023 16:15</dd>
 
