@@ -13,12 +13,15 @@ window.addEventListener("load", function () {
       document.getElementById("cena").classList.remove("error");
     }
 
-    var spanovi = document.querySelectorAll("#oprema  span.badge");
+    var spanovi = document.querySelectorAll("#oprema > span.badge");
     var niz = [];
     for (let i = 0; i < spanovi.length; i++) {
       niz.push(spanovi[i].dataset.id);
     }
-    // niz u hidden input polje
+    alert(niz);
+    var input = document.getElementById("oprema-input");
+    input.value = niz;
+
     return validno;
   });
 

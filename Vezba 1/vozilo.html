@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Vezba 1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <script src="vozilo.js"></script>
+  </head>
 
-<head>
-  <title>Vezba 1</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="main.css" />
-  <script src="vozilo.js"></script>
-</head>
-
-<body>
-  <main class="container p-5 my-5 bg-dark text-white">
-    <form method="post" action="http://postman-echo.com/post" id="forma">
-      <div class="row">
-        <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
-          <div class="container-fluid">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="modeli_u_ponudi.html">Ponuda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="lager.html">Na lageru</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <br />
-      <div class="mb-3 mt-3">
-        <label for="model">Model:</label>
-        <input type="text" class="form-control" id="model" placeholder="Unesite model" name="model" />
-      </div>
-      <div class="mb-3 mt-3">
-        <label for="motor">Motor:</label>
-        <input type="text" class="form-control" id="motor" placeholder="Unesite motor" name="motor" />
-      </div>
-      <div class="mb-3 mt-3">
-        <label for="cena">Cena:</label>
-        <input type="text" class="form-control" id="cena" placeholder="Unesite cenu" name="cena" />
-      </div>
-      <div>
-        <label for="naziv">Dodatna oprema:</label>
-        <div class="input-group mb-3">
-          <select class="form-select" id="spisak-opreme">
-            <option></option>
-            <option value="1">Kozna sedista</option>
-            <option value="2">Felne 19"</option>
-            <option value="3">Vazdusno vesanje</option>
-            <option value="4">HK ozvucenje</option>
-            <option value="5">Grejanje sedista</option>
-          </select>
-          <button class="btn btn-success" type="button" id="dodaj-oprema">+</button>
+  <body>
+    <main class="container p-5 my-5 bg-dark text-white">
+      <form method="post" action="http://postman-echo.com/post" id="forma">
+        <div class="row">
+          <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="modeli_u_ponudi.html"
+                    >Ponuda</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="lager.html">Na lageru</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
+        <br />
+        <div class="mb-3 mt-3">
+          <label for="model">Model:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="model"
+            placeholder="Unesite model"
+            name="model"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="motor">Motor:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="motor"
+            placeholder="Unesite motor"
+            name="motor"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="cena">Cena:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cena"
+            placeholder="Unesite cenu"
+            name="cena"
+          />
+        </div>
+        <div>
+          <label for="naziv">Dodatna oprema:</label>
+          <div class="input-group mb-3">
+            <select class="form-select" id="spisak-opreme">
+              <option></option>
+              <option value="1">Kozna sedista</option>
+              <option value="2">Felne 19"</option>
+              <option value="3">Vazdusno vesanje</option>
+              <option value="4">HK ozvucenje</option>
+              <option value="5">Grejanje sedista</option>
+            </select>
+            <button class="btn btn-success" type="button" id="dodaj-oprema">
+              +
+            </button>
+          </div>
 
-        <div id="oprema">
-          <!-- <span class="badge bg-secondary" data-id="1">
+          <div id="oprema">
+            <!-- <span class="badge bg-secondary" data-id="1">
             Kečap
             <button type="button" class="btn btn-default btn-sm">X</button>
           </span>
@@ -67,43 +91,41 @@
             Šunka
             <button type="button" class="btn btn-default btn-sm">X</button>
           </span> -->
+          </div>
         </div>
-      </div>
 
-      <!-- <span class="badge bg-secondary" data-id="1">
+        <!-- <span class="badge bg-secondary" data-id="1">
           Kečap
           <button type="button" class="btn btn-default btn-sm">X</button>
         </span> -->
 
+        <br />
+        <input type="hidden" name="sastojci" id="oprema-input" />
+        <a href="modeli_u_ponudi.html" class="btn btn-secondary">Nazad</a>
+        <button type="submit" class="btn btn-primary">Sacuvaj</button>
+        <a href="#" class="btn btn-danger">Obrisi</a>
+      </form>
 
-      <br>
-      <input type="hidden" name="sastojci" id="sastojci-input">
-      <a href="modeli_u_ponudi.html" class="btn btn-secondary">Nazad</a>
-      <button type="submit" class="btn btn-primary">Sacuvaj</button>
-      <a href="#" class="btn btn-danger">Obrisi</a>
-    </form>
+      <p></p>
+    </main>
+    <script>
+      // promeniti - nastaviti od 19. iz forma i validacija
+      //       document.getElementById("naziv").classList.add("error");
+      // document.getElementById("naziv").classList.remove("success");
+      // i obrnuto u else delu
 
-    <p></p>
-  </main>
-  <script>
-    // promeniti - nastaviti od 19. iz forma i validacija
-    //       document.getElementById("naziv").classList.add("error");
-    // document.getElementById("naziv").classList.remove("success");
-    // i obrnuto u else delu
-
-    // function validacija() {
-    //   var validno = true;
-    //   if (document.getElementById("cena").value.length < 3) {
-    //     validno = false;
-    //     document.getElementById("cena").classList.add("error");
-    //     document.getElementById("cena").classList.remove("success");
-    //   } else {
-    //     document.getElementById("cena").classList.add("success");
-    //     document.getElementById("cena").classList.remove("error");
-    //   }
-    //   return validno;
-    // }
-  </script>
-</body>
-
+      // function validacija() {
+      //   var validno = true;
+      //   if (document.getElementById("cena").value.length < 3) {
+      //     validno = false;
+      //     document.getElementById("cena").classList.add("error");
+      //     document.getElementById("cena").classList.remove("success");
+      //   } else {
+      //     document.getElementById("cena").classList.add("success");
+      //     document.getElementById("cena").classList.remove("error");
+      //   }
+      //   return validno;
+      // }
+    </script>
+  </body>
 </html>
