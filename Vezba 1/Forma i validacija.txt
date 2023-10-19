@@ -8,3 +8,8 @@ DOSAO SAM DO STRANICA NARUDZBINA.html DO 5.
 
 
 jelo.html validacija sa js i dugme sacuvaj ne radi kako treba ja mislim - jelo.html 9.
+
+
+
+jela.html - tabela
+novo-jelo.html - forma - dodavanje nvog jela?
