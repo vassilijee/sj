@@ -1,0 +1,17 @@
+Forma i validacija
+biranje u dodavanju novog vozila da li?
+submit dugme script ne menja boju za cenu - docs 17.
+
+
+DOSAO SAM DO STRANICA NARUDZBINA.html DO 5.
+
+
+
+jelo.html validacija sa js i dugme sacuvaj ne radi kako treba ja mislim - jelo.html 9.
+
+
+
+jela.html - tabela
+novo-jelo.html - forma - dodavanje nvog jela?
+
+3. - 17. do testiranja, ne radi
