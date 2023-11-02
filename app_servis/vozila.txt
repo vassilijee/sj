@@ -1,0 +1,2 @@
+{"model":"XC40","motor":"2.0","cena":"50000","kategorija":"2"}
+{"model":"S60","motor":"3.0","cena":"45000","kategorija":"2"}

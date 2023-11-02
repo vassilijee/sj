@@ -40,14 +40,14 @@
     <table class="table table-dark table-striped">
       <thead>
         <tr>
-          <th>Model</th>
-          <th>Motor</th>
-          <th>Kategorija</th>
-          <th>Cena</th>
-          <th>Akcija</th>
+          <td>Model</td>
+          <td>Motor</td>
+          <td>Kategorija</td>
+          <td>Cena</td>
+          <td>Akcija</td>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="spisak">
         <tr>
           <td>XC90</td>
           <td>2.0 190hp</td>
@@ -79,8 +79,59 @@
     </table>
     <br />
     <a href="novo_vozilo_ponuda.html" type="button" class="btn btn-secondary float-end">Novo vozilo u ponudi</a>
-    <p></p>
   </main>
+  <script>
+
+    window.addEventListener("load", function () {
+      fetch('/vozila')
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          for (let i = 0; i < data.length; i++) {
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            let td4 = document.createElement("td");
+            let td5 = document.createElement("td");
+            let button = document.createElement("button");
+            button.setAttribute("class", "btn btn-secondary");
+            var textButton = "Promena cene";
+
+            td1.innerHTML = data[i].model;
+            td2.innerHTML = data[i].motor;
+            td3.innerHTML = data[i].kategorija;
+            td4.innerHTML = data[i].cena;
+            button.innerHTML = "Promena cene";
+            td5.appendChild(button);
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.appendChild(td5);
+
+
+            document.getElementById("spisak").appendChild(tr);
+
+            //ovde ide i pridruzivanje click eventa na <button>  Promena cene
+            let btn = document.createElement("button");
+            btn.addEventListener("click", function () {
+              //..telo funkcije…
+            });
+
+          }
+
+
+        })
+        .catch(error => {
+          console.error("Error fetching data:", error);
+        });
+    });
+
+
+  </script>
 </body>
 
 </html>
